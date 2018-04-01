@@ -9,6 +9,8 @@
   "author": "clayton perszyk",
   "license": "ISC",
   "dependencies": {
-    "npm": "^5.8.0"
+    "botbuilder": "^3.14.1",
+    "npm": "^5.8.0",
+    "restify": "^7.1.0"
   }
 }
