@@ -40,6 +40,16 @@ bot.dialog('/', [
     }
 ]);
 
+bot.dialog('/city', [
+  function (session) {
+    builder.Prompts.text(session, 'Please enter the name of the city where you want to play.');
+  },
+  function (session, results) {
+    // get pinball by city
+
+  }
+]);
+
 server.listen(process.env.port || process.env.PORT || 3978, function () {
     console.log('listening to %s', server.url);
 });
