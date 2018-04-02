@@ -1,15 +1,15 @@
-var restify = require('restify');
-var builder = require('botbuilder');
-var config = require('./config.js');
-var where = require('node-where');
-var pinballClient = require('./pinballMapClient.js');
-var server = restify.createServer();
+const restify = require('restify');
+const builder = require('botbuilder');
+const config = require('./config.js');
+const where = require('node-where');
+const pinballClient = require('./pinballMapClient.js');
+const server = restify.createServer();
 
-var connector = new builder.ChatConnector({
+const connector = new builder.ChatConnector({
     appId: config.appId,
     appPassword: config.appPassword
 });
-var bot = new builder.UniversalBot(connector);
+const bot = new builder.UniversalBot(connector);
 
 server.post('/api/messages', connector.listen());
 
